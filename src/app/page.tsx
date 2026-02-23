@@ -28,8 +28,6 @@ const translations = {
   en: {
     role: "Game & Backend Programmer",
     connect: "Connect",
-    mission:
-      "Scaling PT Anoa Interactive Studio with technical excellence and community focus.",
     summaryTitle: "Summary",
     summaryText:
       "Founder and Owner of PT Anoa Interactive Studio. Bridging creative game design with high-performance backend systems. Expert in Unity engine upgrades, live-ops, and cross-platform porting for global markets.",
@@ -61,8 +59,6 @@ const translations = {
   id: {
     role: "Programmer Game & Backend",
     connect: "Hubungi",
-    mission:
-      "Meningkatkan PT Anoa Interactive Studio dengan keunggulan teknis dan fokus pada komunitas.",
     summaryTitle: "Ringkasan",
     summaryText:
       "Pendiri dan Pemilik PT Anoa Interactive Studio. Menghubungkan desain game kreatif dengan sistem backend berperforma tinggi. Ahli dalam peningkatan engine Unity, live-ops, dan porting lintas platform untuk pasar global.",
@@ -159,28 +155,6 @@ const cvData = {
   ],
   projects: [
     {
-      title: "Punch It 3D",
-      category: ["Unity", "Game"],
-      desc: {
-        en: "3rd Place GameSeed 2023. Action-packed punching game with satisfying physics.",
-        id: "Juara 3 GameSeed 2023. Game pukulan aksi dengan fisika memuaskan.",
-      },
-      link: "https://play.google.com/store/apps/details?id=com.anoa.punchit3d",
-      icon: "https://cdn-icons-ng.flaticon.com/512/5260/5260479.png",
-      featured: true,
-    },
-    {
-      title: "The Bot of Us",
-      category: ["Unity", "Game"],
-      desc: {
-        en: "Best Technical Game Jam+ 2023. Innovative puzzle game with AI mechanics.",
-        id: "Best Technical Game Jam+ 2023. Game puzzle inovatif dengan mekanik AI.",
-      },
-      link: "https://play.google.com/store/apps/details?id=com.anoa.thebotofus",
-      icon: "https://cdn-icons-ng.flaticon.com/512/5260/5260479.png",
-      featured: true,
-    },
-    {
       title: "Handy Farm: Roguelike",
       category: ["Unity", "Backend", "LiveOps"],
       desc: {
@@ -210,10 +184,51 @@ const cvData = {
       link: "https://play.google.com/store/apps/details?id=com.Anoa.SukuKata",
       icon: "https://play-lh.googleusercontent.com/IT1TNPpyqctHvKwYad6Jo61N_CkbnGwRsuX52VfqHoduRrAXmEXT0bt0PvslIHFHBOE=s48-rw",
     },
+    {
+      title: "Punch It 3D",
+      category: ["Unity", "Game", "WebGL"],
+      desc: {
+        en: "Ported to WebGL for web publishing. GameSeed 2023 winner.",
+        id: "Dipindahkan ke WebGL untuk publikasi web. Pemenang GameSeed 2023.",
+      },
+      link: "https://play.google.com/store/apps/details?id=com.Anoa.PI3D",
+      icon: "https://play-lh.googleusercontent.com/XfInkf7GnTOy02d15d2wn3-gaUjd-tJVJ3Iffj2hmgseBNfw9XfK04mv21YbAumERAA=s48-rw",
+    },
+    {
+      title: "Supermarket Packing",
+      category: ["Unity", "Game"],
+      desc: {
+        en: "Satisfying packing mechanics with complex physics interaction.",
+        id: "Mekanik pengemasan yang memuaskan dengan interaksi fisika kompleks.",
+      },
+      link: "https://play.google.com/store/apps/details?id=com.anoa.supermarketpacking",
+      icon: "https://play-lh.googleusercontent.com/Z__7J4V1TmuU8iBwYF1LeYRVfEyn4Wf-b8sIzxCQaPBUmqe03EEGwDKAi4wRyx4y2A=s48-rw",
+    },
+    {
+      title: "Soda Factory",
+      category: ["Unity", "Game"],
+      desc: {
+        en: "Idle management game with resource balancing systems.",
+        id: "Game manajemen idle dengan sistem keseimbangan sumber daya.",
+      },
+      link: "https://play.google.com/store/apps/details?id=com.anoa.SodaFactory",
+      icon: "https://play-lh.googleusercontent.com/9C89tK6i0-R-U2fJ6-z1p9n8f8o8v8w8w0P1R5oG-o8n3L5R-z1p9n8f8o8v8w8w=s48-rw",
+    },
+    {
+      title: "Crop Crush Garden",
+      category: ["Unity", "Game"],
+      desc: {
+        en: "Casual puzzle game with localized multi-language support.",
+        id: "Game puzzle kasual dengan dukungan multi-bahasa yang dilokalkan.",
+      },
+      link: "https://play.google.com/store/apps/details?id=com.Anoa.CCG",
+      icon: "https://play-lh.googleusercontent.com/gVpGMjFcqNzy27U8b3JCUmTplhuzGZIv7iqo6UkT2Pr_2_8iUZwmG5TbzeK2ztwCgFQ=w240-h480-rw",
+    },
   ],
   awards: [
     { title: "3rd Place - GameSeed", project: "Punch It 3D", year: "2023" },
     { title: "Best Technical - Game Jam+", project: "The Bot of Us", year: "2023" },
+    { title: "2nd Place - Tiltspot Jam", project: "Controller System", year: "2019" },
   ],
 };
 
@@ -339,13 +354,19 @@ export default function Portfolio() {
             {t.connect}
           </h3>
           <div className="space-y-4 text-sm">
-            <p className="text-xs text-stone-600 italic">{t.mission}</p>
             <div className="flex flex-col gap-2">
               <a
                 href="mailto:auryanmail@gmail.com"
                 className="flex items-center gap-2 text-stone-600 hover:text-amber-600"
               >
                 <span>✉️</span> auryanmail@gmail.com
+              </a>
+              <a
+                href="https://wa.me/62895611746668"
+                target="_blank"
+                className="flex items-center gap-2 text-stone-600 hover:text-amber-600"
+              >
+                <span>📱</span> WhatsApp
               </a>
               <a
                 href="https://linkedin.com/in/auryan-pratama-80b928238"
