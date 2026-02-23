@@ -212,7 +212,7 @@ const cvData = {
         id: "Menambahkan sistem monetisasi. Di-port ke WebGL untuk penerbit Plug in Digital. Mirip dengan Supermarket Packing.",
       },
       link: "https://play.google.com/store/apps/details?id=com.anoa.SodaFactory",
-      icon: "https://play-lh.googleusercontent.com/9C89tK6i0-R-U2fJ6-z1p9n8f8o8v8w8w0P1R5oG-o8n3L5R-z1p9n8f8o8v8w8w=s48-rw",
+      icon: "https://play-lh.googleusercontent.com/UqB-3wL0Qw4qG6V7X8Z9Y0U1I2O3P4A5S6D7F8G9H0J1K2L3M4N5O6P7Q8R9S0T1U2V3W4X5Y6Z7=s48-rw",
     },
     {
       title: "Crop Crush Garden",
@@ -594,9 +594,9 @@ export default function Portfolio() {
                 <a
                   href={p.link}
                   target="_blank"
-                  className="w-full py-2 bg-stone-900 text-white text-center text-[10px] font-bold rounded-lg hover:bg-amber-600 transition-all flex items-center justify-center gap-2"
+                  className="w-full py-2 bg-green-500 text-white text-center text-[10px] font-bold rounded-lg hover:bg-green-600 transition-all flex items-center justify-center gap-2 shadow-sm"
                 >
-                  <span>📲</span> {t.playNow}
+                  <span>▶</span> {t.playNow}
                 </a>
               </div>
             ))}
