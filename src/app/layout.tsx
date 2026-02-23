@@ -13,8 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Next.js Template",
-  description: "A minimal Next.js starter template",
+  title: "Auryan Pratama - Interactive Portfolio",
+  description:
+    "Game & Backend Programmer - Founder of PT Anoa Interactive Studio. Expert in Unity engine upgrades, live-ops, and cross-platform porting for global markets.",
 };
 
 export default function RootLayout({
@@ -25,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-stone-50 text-stone-900 selection:bg-amber-300`}
       >
         {children}
       </body>
