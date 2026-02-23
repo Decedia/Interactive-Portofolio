@@ -162,7 +162,7 @@ const cvData = {
         id: "Implementasi IAP, Ads SDK, dan pelacakan data melalui Firebase.",
       },
       link: "https://play.google.com/store/apps/details?id=com.anoa.handyfarm",
-      icon: "https://play-lh.googleusercontent.com/z5ftczCVIYqJ3hkSsXhgPSgegRXnNAxdq_TziTu3tigc2BD0jNOk9D0lALveH2WnW_JwCKoqdQ7S_0Z5yoCJ=s48-rw",
+      icon: "/Handy Farm icon.png",
     },
     {
       title: "Water Ring Toss 3D",
@@ -172,7 +172,7 @@ const cvData = {
         id: "Memperbarui Unity dari versi legasi ke versi terbaru. Menambahkan sistem toko untuk kustomisasi skin. Game asli dari Gamebot Air.",
       },
       link: "https://play.google.com/store/apps/details?id=com.Anoa.WRT3D",
-      icon: "https://play-lh.googleusercontent.com/ToJOcqCwzQ5R9ZQavkMjZ3MpIcD8JJYBy6iRUde1OvfEcnHr8UnQHDqXuWFRjMkNqDg=s48-rw",
+      icon: "/WRT Icon 512.png",
     },
     {
       title: "Suku Kata",
@@ -182,7 +182,7 @@ const cvData = {
         id: "Mengembangkan mekanik gameplay dasar. Database kata menggunakan JSON. Menambahkan sistem monetisasi. Versi Indonesia dari Wordle.",
       },
       link: "https://play.google.com/store/apps/details?id=com.Anoa.SukuKata",
-      icon: "https://play-lh.googleusercontent.com/IT1TNPpyqctHvKwYad6Jo61N_CkbnGwRsuX52VfqHoduRrAXmEXT0bt0PvslIHFHBOE=s48-rw",
+      icon: "/Suku Kata icon.png",
     },
     {
       title: "Punch It 3D",
@@ -192,7 +192,7 @@ const cvData = {
         id: "Pemenang Juara 3 di GameSeed 2023. Peran saya: Menambahkan monetisasi, analitik, dan fitur tambahan.",
       },
       link: "https://play.google.com/store/apps/details?id=com.Anoa.PI3D",
-      icon: "https://play-lh.googleusercontent.com/XfInkf7GnTOy02d15d2wn3-gaUjd-tJVJ3Iffj2hmgseBNfw9XfK04mv21YbAumERAA=s48-rw",
+      icon: "/Punch it icon.png",
     },
     {
       title: "Supermarket Packing",
@@ -202,7 +202,7 @@ const cvData = {
         id: "Menambahkan sistem monetisasi. Di-port ke WebGL untuk penerbit Plug in Digital.",
       },
       link: "https://play.google.com/store/apps/details?id=com.anoa.supermarketpacking",
-      icon: "https://play-lh.googleusercontent.com/Z__7J4V1TmuU8iBwYF1LeYRVfEyn4Wf-b8sIzxCQaPBUmqe03EEGwDKAi4wRyx4y2A=s48-rw",
+      icon: "/Super market packing.png",
     },
     {
       title: "Soda Factory",
@@ -212,7 +212,7 @@ const cvData = {
         id: "Menambahkan sistem monetisasi. Di-port ke WebGL untuk penerbit Plug in Digital. Mirip dengan Supermarket Packing.",
       },
       link: "https://play.google.com/store/apps/details?id=com.anoa.SodaFactory",
-      icon: "https://play-lh.googleusercontent.com/UqB-3wL0Qw4qG6V7X8Z9Y0U1I2O3P4A5S6D7F8G9H0J1K2L3M4N5O6P7Q8R9S0T1U2V3W4X5Y6Z7=s48-rw",
+      icon: "/Soda Factory icon.png",
     },
     {
       title: "Crop Crush Garden",
@@ -594,9 +594,13 @@ export default function Portfolio() {
                 <a
                   href={p.link}
                   target="_blank"
-                  className="w-full py-2 bg-green-500 text-white text-center text-[10px] font-bold rounded-lg hover:bg-green-600 transition-all flex items-center justify-center gap-2 shadow-sm"
+                  className="w-full flex items-center justify-center"
                 >
-                  <span>▶</span> {t.playNow}
+                  <img
+                    src="/GetItOnGooglePlay_Badge_Web_color_English.svg"
+                    alt="Get it on Google Play"
+                    className="w-full max-w-[140px] hover:opacity-90 transition-opacity"
+                  />
                 </a>
               </div>
             ))}
