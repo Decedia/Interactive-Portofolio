@@ -159,6 +159,28 @@ const cvData = {
   ],
   projects: [
     {
+      title: "Punch It 3D",
+      category: ["Unity", "Game"],
+      desc: {
+        en: "3rd Place GameSeed 2023. Action-packed punching game with satisfying physics.",
+        id: "Juara 3 GameSeed 2023. Game pukulan aksi dengan fisika memuaskan.",
+      },
+      link: "https://play.google.com/store/apps/details?id=com.anoa.punchit3d",
+      icon: "https://cdn-icons-ng.flaticon.com/512/5260/5260479.png",
+      featured: true,
+    },
+    {
+      title: "The Bot of Us",
+      category: ["Unity", "Game"],
+      desc: {
+        en: "Best Technical Game Jam+ 2023. Innovative puzzle game with AI mechanics.",
+        id: "Best Technical Game Jam+ 2023. Game puzzle inovatif dengan mekanik AI.",
+      },
+      link: "https://play.google.com/store/apps/details?id=com.anoa.thebotofus",
+      icon: "https://cdn-icons-ng.flaticon.com/512/5260/5260479.png",
+      featured: true,
+    },
+    {
       title: "Handy Farm: Roguelike",
       category: ["Unity", "Backend", "LiveOps"],
       desc: {
