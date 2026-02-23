@@ -11,6 +11,9 @@ import {
   Legend,
 } from "chart.js";
 import { Radar } from "react-chartjs-2";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
+import { faLinkedinIn, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 
 ChartJS.register(
   RadialLinearScale,
@@ -359,21 +362,21 @@ export default function Portfolio() {
                 href="mailto:auryanmail@gmail.com"
                 className="flex items-center gap-2 text-stone-600 hover:text-amber-600"
               >
-                <span>✉️</span> auryanmail@gmail.com
+                <FontAwesomeIcon icon={faEnvelope} /> auryanmail@gmail.com
               </a>
               <a
                 href="https://wa.me/62895611746668"
                 target="_blank"
                 className="flex items-center gap-2 text-stone-600 hover:text-amber-600"
               >
-                <span>📱</span> WhatsApp
+                <FontAwesomeIcon icon={faWhatsapp} /> WhatsApp
               </a>
               <a
                 href="https://linkedin.com/in/auryan-pratama-80b928238"
                 target="_blank"
                 className="flex items-center gap-2 text-stone-600 hover:text-amber-600"
               >
-                <span>🔗</span> LinkedIn Profile
+                <FontAwesomeIcon icon={faLinkedinIn} /> LinkedIn Profile
               </a>
             </div>
           </div>
