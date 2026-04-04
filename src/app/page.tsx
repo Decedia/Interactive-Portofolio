@@ -232,6 +232,15 @@ const cvData = {
   ],
   websites: [
     {
+      title: "Block Royale Admin Panel",
+      desc: {
+        en: "An admin panel built with Laravel for the game Block Royale, released on the Google Play Store for a client.",
+        id: "Panel admin yang dibangun dengan Laravel untuk game Block Royale, dirilis di Google Play Store untuk klien.",
+      },
+      link: "#",
+      screenshot: "/block-royale-admin.png"
+    },
+    {
       title: "Anoa Interactive Studio",
       desc: {
         en: "Official website for Anoa Interactive, an Indonesian indie game development studio dedicated to creating immersive and engaging gaming experiences.",
@@ -674,9 +683,11 @@ export default function Portfolio() {
                 <div className="w-full md:w-1/2 space-y-4">
                   <h3 className="text-2xl font-bold">{w.title}</h3>
                   <p className="text-stone-600 leading-relaxed">{w.desc[currentLang]}</p>
-                  <a href={w.link} target="_blank" className="inline-block bg-stone-900 hover:bg-stone-700 text-white px-6 py-2 rounded-lg font-bold transition-colors">
-                    Visit Website
-                  </a>
+                  {w.link && w.link !== "#" && (
+                    <a href={w.link} target="_blank" className="inline-block bg-stone-900 hover:bg-stone-700 text-white px-6 py-2 rounded-lg font-bold transition-colors">
+                      Visit Website
+                    </a>
+                  )}
                 </div>
               </div>
             ))}
