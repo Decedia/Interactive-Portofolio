@@ -21,7 +21,7 @@ ChartJS.register(
   LineElement,
   Filler,
   Tooltip,
-  Legend
+  Legend,
 );
 
 type Language = "en" | "id";
@@ -43,7 +43,7 @@ const translations = {
     featuredBadge: "FEATURED WEBGL PORT",
     featuredTitle: "Rogue Farm: WebGL Migration",
     featuredDesc:
-      'Successfully managed the end-to-end conversion from Mobile to WebGL. Overcame technical hurdles including building a custom <b>Save System</b> for web browsers and re-engineering the <b>Dragging Mechanism</b> for mouse/trackpad precision.',
+      "Successfully managed the end-to-end conversion from Mobile to WebGL. Overcame technical hurdles including building a custom <b>Save System</b> for web browsers and re-engineering the <b>Dragging Mechanism</b> for mouse/trackpad precision.",
     featStat1: "Fixed",
     featStat2: "Added",
     featVal1: "Conversion Bugs",
@@ -56,6 +56,7 @@ const translations = {
     eduDeg: "B.CS in Informatics",
     eduJam: "Global Game Jam Organizer",
     eduJamSub: "Medan Chapter (3 Years Total)",
+    websiteTitle: "Web Projects",
     clickExpand: "Click to expand details",
     playNow: "PLAY NOW",
   },
@@ -74,7 +75,7 @@ const translations = {
     featuredBadge: "PORT WEBGL UNGGULAN",
     featuredTitle: "Rogue Farm: Migrasi WebGL",
     featuredDesc:
-      'Berhasil mengelola konversi ujung-ke-ujung dari Seluler ke WebGL. Mengatasi rintangan teknis termasuk membangun Sistem Simpan (Save) khusus untuk browser web dan merekayasa ulang Mekanisme Seret (Dragging) untuk presisi mouse/trackpad.',
+      "Berhasil mengelola konversi ujung-ke-ujung dari Seluler ke WebGL. Mengatasi rintangan teknis termasuk membangun Sistem Simpan (Save) khusus untuk browser web dan merekayasa ulang Mekanisme Seret (Dragging) untuk presisi mouse/trackpad.",
     featStat1: "Memperbaiki",
     featStat2: "Menambahkan",
     featVal1: "Bug Konversi",
@@ -87,6 +88,7 @@ const translations = {
     eduDeg: "S.Kom Teknik Informatika",
     eduJam: "Penyelenggara Global Game Jam",
     eduJamSub: "Chapter Medan (Total 3 Tahun)",
+    websiteTitle: "Proyek Web",
     clickExpand: "Klik untuk melihat detail",
     playNow: "MAIN SEKARANG",
   },
@@ -228,10 +230,29 @@ const cvData = {
       icon: "https://play-lh.googleusercontent.com/gVpGMjFcqNzy27U8b3JCUmTplhuzGZIv7iqo6UkT2Pr_2_8iUZwmG5TbzeK2ztwCgFQ=w240-h480-rw",
     },
   ],
+  websites: [
+    {
+      title: "Anoa Interactive Studio",
+      desc: {
+        en: "Official website for Anoa Interactive, an Indonesian indie game development studio dedicated to creating immersive and engaging gaming experiences.",
+        id: "Website resmi untuk Anoa Interactive, studio pengembangan game indie Indonesia yang berdedikasi untuk menciptakan pengalaman bermain game yang imersif dan menarik.",
+      },
+      link: "https://www.anoainteractive.co.id/",
+      screenshot: "/anoa-interactive-website.png"
+    }
+  ],
   awards: [
     { title: "3rd Place - GameSeed", project: "Punch It 3D", year: "2023" },
-    { title: "Best Technical - Game Jam+", project: "The Bot of Us", year: "2023" },
-    { title: "2nd Place - Tiltspot Jam", project: "Controller System", year: "2019" },
+    {
+      title: "Best Technical - Game Jam+",
+      project: "The Bot of Us",
+      year: "2023",
+    },
+    {
+      title: "2nd Place - Tiltspot Jam",
+      project: "Controller System",
+      year: "2019",
+    },
   ],
 };
 
@@ -246,12 +267,12 @@ export default function Portfolio() {
   const getSkillValues = () => {
     if (currentMode === "game") {
       return cvData.skills.map((s) =>
-        s.type === "game" || s.type === "dev" ? s.value : s.value * 0.4
+        s.type === "game" || s.type === "dev" ? s.value : s.value * 0.4,
       );
     }
     if (currentMode === "backend") {
       return cvData.skills.map((s) =>
-        s.type === "backend" || s.type === "dev" ? s.value : s.value * 0.4
+        s.type === "backend" || s.type === "dev" ? s.value : s.value * 0.4,
       );
     }
     return cvData.skills.map((s) => s.value);
@@ -285,7 +306,8 @@ export default function Portfolio() {
 
   const filteredProjects = cvData.projects.filter(
     (p) =>
-      projectFilter === "all" || p.category.some((c) => c.includes(projectFilter))
+      projectFilter === "all" ||
+      p.category.some((c) => c.includes(projectFilter)),
   );
 
   const isSkillDimmed = (type: string) => {
@@ -338,7 +360,13 @@ export default function Portfolio() {
                 key={mode}
                 onClick={() => {
                   setCurrentMode(mode);
-                  setProjectFilter(mode === "game" ? "Unity" : mode === "backend" ? "Backend" : "all");
+                  setProjectFilter(
+                    mode === "game"
+                      ? "Unity"
+                      : mode === "backend"
+                        ? "Backend"
+                        : "all",
+                  );
                 }}
                 className={`flex-1 py-1.5 rounded-md transition-colors ${
                   currentMode === mode
@@ -390,23 +418,33 @@ export default function Portfolio() {
           <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
             <span>📜</span> {t.summaryTitle}
           </h2>
-          <p className="text-stone-600 leading-relaxed text-lg">{t.summaryText}</p>
+          <p className="text-stone-600 leading-relaxed text-lg">
+            {t.summaryText}
+          </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8 pt-6 border-t border-stone-200">
             <div className="text-center">
               <div className="text-2xl font-bold text-amber-600">6+</div>
-              <div className="text-[10px] uppercase text-stone-600">{t.statExp}</div>
+              <div className="text-[10px] uppercase text-stone-600">
+                {t.statExp}
+              </div>
             </div>
             <div className="text-center">
               <div className="text-2xl font-bold text-amber-600">10+</div>
-              <div className="text-[10px] uppercase text-stone-600">{t.statApps}</div>
+              <div className="text-[10px] uppercase text-stone-600">
+                {t.statApps}
+              </div>
             </div>
             <div className="text-center">
               <div className="text-2xl font-bold text-amber-600">3</div>
-              <div className="text-[10px] uppercase text-stone-600">{t.statAwards}</div>
+              <div className="text-[10px] uppercase text-stone-600">
+                {t.statAwards}
+              </div>
             </div>
             <div className="text-center">
               <div className="text-2xl font-bold text-amber-600">3</div>
-              <div className="text-[10px] uppercase text-stone-600">{t.statJams}</div>
+              <div className="text-[10px] uppercase text-stone-600">
+                {t.statJams}
+              </div>
             </div>
           </div>
         </section>
@@ -430,7 +468,9 @@ export default function Portfolio() {
                 <div
                   key={idx}
                   className={`mb-4 transition-all ${
-                    isSkillDimmed(cat.type) ? "opacity-30 grayscale" : "opacity-100"
+                    isSkillDimmed(cat.type)
+                      ? "opacity-30 grayscale"
+                      : "opacity-100"
                   }`}
                 >
                   <h4 className="text-[10px] font-black text-stone-400 uppercase tracking-widest mb-2">
@@ -454,13 +494,17 @@ export default function Portfolio() {
 
         {/* Featured Porting Project */}
         <section className="bg-stone-900 text-white p-8 rounded-2xl shadow-lg border border-stone-900 relative overflow-hidden">
-          <div className="absolute top-0 right-0 p-4 opacity-10 text-8xl">⚙️</div>
+          <div className="absolute top-0 right-0 p-4 opacity-10 text-8xl">
+            ⚙️
+          </div>
           <div className="relative z-10">
             <div className="flex items-center gap-2 mb-2">
               <span className="bg-gradient-to-br from-amber-600 to-amber-500 text-white px-2 py-0.5 rounded text-[10px] font-bold tracking-wide">
                 {t.featuredBadge}
               </span>
-              <span className="text-xs font-bold text-stone-400">Armor Games</span>
+              <span className="text-xs font-bold text-stone-400">
+                Armor Games
+              </span>
             </div>
             <h2 className="text-2xl font-bold mb-4">{t.featuredTitle}</h2>
             <p
@@ -513,15 +557,21 @@ export default function Portfolio() {
                 />
                 <div
                   className="bg-stone-50 p-4 rounded-lg border border-stone-200 cursor-pointer hover:bg-white transition-all"
-                  onClick={() => setExpandedExp(expandedExp === idx ? null : idx)}
+                  onClick={() =>
+                    setExpandedExp(expandedExp === idx ? null : idx)
+                  }
                 >
                   <div className="flex justify-between items-start mb-1">
-                    <h3 className="font-bold text-stone-900">{job.role[currentLang]}</h3>
+                    <h3 className="font-bold text-stone-900">
+                      {job.role[currentLang]}
+                    </h3>
                     <span className="text-[10px] font-bold text-stone-400">
                       {job.period}
                     </span>
                   </div>
-                  <p className="text-xs text-amber-600 font-bold mb-2">{job.company}</p>
+                  <p className="text-xs text-amber-600 font-bold mb-2">
+                    {job.company}
+                  </p>
                   {expandedExp === idx && (
                     <div className="mt-3 pt-3 border-t border-stone-200 text-xs text-stone-600 space-y-2">
                       <ul className="list-disc pl-4 space-y-1">
@@ -605,6 +655,29 @@ export default function Portfolio() {
                     className="w-full max-w-[140px] hover:opacity-90 transition-opacity"
                   />
                 </a>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Websites Section */}
+        <section className="bg-white p-8 rounded-2xl shadow-sm border border-stone-200">
+          <h2 className="text-xl font-bold flex items-center gap-2 mb-6">
+            <span>🌐</span> {t.websiteTitle}
+          </h2>
+          <div className="grid grid-cols-1 gap-8">
+            {cvData.websites.map((w, idx) => (
+              <div key={idx} className="flex flex-col md:flex-row gap-6 items-center bg-stone-50 p-6 rounded-xl border border-stone-200">
+                <div className="w-full md:w-1/2">
+                  <img src={w.screenshot} alt={w.title} className="w-full rounded-lg shadow-sm border border-stone-200" />
+                </div>
+                <div className="w-full md:w-1/2 space-y-4">
+                  <h3 className="text-2xl font-bold">{w.title}</h3>
+                  <p className="text-stone-600 leading-relaxed">{w.desc[currentLang]}</p>
+                  <a href={w.link} target="_blank" className="inline-block bg-stone-900 hover:bg-stone-700 text-white px-6 py-2 rounded-lg font-bold transition-colors">
+                    Visit Website
+                  </a>
+                </div>
               </div>
             ))}
           </div>
